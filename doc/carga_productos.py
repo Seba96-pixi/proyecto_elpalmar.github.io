@@ -1,0 +1,62 @@
+import pandas as pd
+
+data = {
+    'Codigo Interno': [
+        '007-000-002342', '007-000-002341', '007-000-002203', '007-000-002757', 
+        '007-000-002175', '007-000-001380', '007-000-001361', '007-000-001381', 
+        '007-000-001829', '007-000-001686', '007-000-001125', '007-000-001111', 
+        '007-000-001679', '007-000-001109', '007-000-002172', '007-000-001859', 
+        '007-000-002173', '007-000-002615', '007-000-001681', '007-000-001110',
+        '024-000-001682', '007-000-001541', '007-000-001434', '007-000-001440',
+        '007-000-001382', '007-000-001363', '007-000-001523', '007-000-001522',
+        '007-000-001362', '007-000-001680', '007-000-003029', '007-000-001677',
+        '007-000-001685', '007-000-002760', '007-000-003031', '007-000-002761',
+        '007-000-002758', '021-000-002759', '007-000-001688', '007-000-001687',
+        '007-000-001126', '007-000-001778', '007-000-001439', '007-000-002826',
+        '007-000-002350', '007-000-002202', '021-000-001858', '007-000-001433'
+    ],
+    'Descripcion del Articulo': [
+        'CAJA CERVEZA CRISTAL O ESCUDO 1.2 LT', 'CAJA CERVEZA DORADA 1.2 LT X 10', 'CAJA CERVEZA SOL 710 CC X 12', 
+        'CERVEZA ARTESANAL MAESTRA RESERVA 750', 'CERVEZA ARTESANAL ODISEA 470 ML', 'CERVEZA AUSTRAL CALAFATE 330 C.C.', 
+        'CERVEZA AUSTRAL CALAFATE 500 C.C.', 'CERVEZA AUSTRAL LAGER 330 CC', 'CERVEZA BLADE 8 LT', 
+        'CERVEZA COORS LATA 470 ML', 'CERVEZA COORS ORIGINAL BEER 355 ML', 'CERVEZA CORONA 330 CC CAJA X 24 UNI.', 
+        'CERVEZA CRISTAL LATA 350 CC.', 'CERVEZA CRISTAL RETORNABLE 1.2 LT', 'CERVEZA CUSQUEÑA LATON 710 ML', 
+        'CERVEZA CUSQUEÑA VIDRIO DESECHABLE 62', 'CERVEZA DISPLAY CUSQUEÑA LATON 710 ML', 'CERVEZA DORADA 1.2 LTS RETORNABLE', 
+        'CERVEZA ESCUDO LAGER 470 ML', 'CERVEZA ESCUDO LAGER RETORNABLE 1.2 L', 'CERVEZA ESCUDO SILVER 470 C.C.', 
+        'CERVEZA HEINEKEN CERO ALCOHOL 330 C.', 'CERVEZA HEINEKEN ORIGINAL 355 ML', 'CERVEZA HEINEKEN ORIGINAL RETORNABLE', 
+        'CERVEZA KUNSTMANN TOROBAYO 330 C.C.', 'CERVEZA KUNSTMANN TOROBAYO 500 C.C.', 'CERVEZA LATA CRISTAL CERO 350 C.C.', 
+        'CERVEZA LATA CRISTAL RADLER CERO 350', 'CERVEZA LATON BUDWEISER KING OF BEERS', 'CERVEZA LEMON STONES 470 ML', 
+        'CERVEZA MAESTRA APA 330 CC.', 'CERVEZA MALTA MORENITA 1.2 ML', 'CERVEZA MALTA MORENITA LATA 470 ML', 
+        'CERVEZA MESTRA AMBER ALE ITALIA 330', 'CERVEZA MESTRA APA 330 CC', 'CERVEZA MESTRA BLONDE ALE 330CC.', 
+        'CERVEZA MESTRA SCOTCH ALE YUNGAY 330', 'CERVEZA MESTRA STOUT ALE FRANKLIN 33', 'CERVEZA PATAGONIA AUSTRAL HOPPY LAGER', 
+        'CERVEZA PATAGONIA AUSTRAL RED LAGER', 'CERVEZA PATAGONIA BLACK LAGER 470 CC', 'CERVEZA ROYAL BOTELLIN 330 CC X 6 UND', 
+        'CERVEZA ROYAL GUARD PREMIUN LAGER RE', 'CERVEZA ROYAL RETORNABLE X6 330CC.', 'CERVEZA SOL 330CC X 6', 
+        'CERVEZA SOL 710 CC', 'CERVEZA STELLA ARTOIS VIDRIO DESECHAB', 'CERVEZAS STELLA ARTOIS 330 CC BOTELLI'
+    ],
+    'Unidad': ['UNIDAD'] * 48,
+    'Precio Unidad $': ['11.766', '8.490', '11.100', '3.690', '930', '1.450', '1.690', '1.450', '25.990', '816', 
+    '890', '21.560', '687', '1.200', '1.000', '900', '11.100', '850', '690', '1.200', '605', 
+    '890', '885', '1.260', '1.506', '1.690', '757', '757', '1.000', '840', '1.300', '1.350', 
+    '750', '1.300', '1.300', '1.300', '1.300', '1.300', '970', '5.820', '970', '4.850', 
+    '1.190', '3.990', '5.300', '1.000', '11.000', '930']
+}
+
+# Crear el DataFrame
+df = pd.DataFrame(data)
+
+# Generar la columna HTML
+df['HTML'] = df.apply(lambda row: f'<div class="card">'
+                                  f'<img src="assets/img/ropa1.jpeg" class="card-img">'
+                                  f'<h5>{row["Descripcion del Articulo"]}</h5>'
+                                  f'<p>SKU: {row["Codigo Interno"]}</p>'
+                                  f'<p>S/.<small class="precio">${row["Precio Unidad $"]}</small></p>'
+                                  f'<a href="#" class="button agregar-carrito" data-id="1">Comprar</a>'
+                                  f'</div>', axis=1)
+
+# Ver el resultado
+df[['HTML']].head()
+
+output_path = r"D:\PROYECTO_EL_PALMAR\Tienda-Virtual\doc\cerveza_html.xlsx"
+df.to_excel(output_path, index=False)
+
+print(f"Archivo guardado en: {output_path}")

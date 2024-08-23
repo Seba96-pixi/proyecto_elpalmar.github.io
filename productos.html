@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <div class="menu logo-nav">
+        <a href="index.html" class="logo">El Palmar</a>
+        <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
+        <nav class="navigation">
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <!--<li><a href="contacto.html">Contacto</a></li>-->
+            <li class="search-icon">
+              <input type="search" placeholder="Search">
+              <label class="icon">
+                <span class="fas fa-search"></span>
+              </label>
+            </li>
+            <li class="car" >
+              <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg>
+                <div id="carrito" class="dropdown-menu">
+                  <table id="lista-carrito" class="table">
+                      <thead>
+                          <tr>
+                              <th>Imagen</th>
+                              <th>Nombre</th>
+                              <th>Precio</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+
+                  <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
+                  <a href="#" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<main>
+
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <img src="" alt="" class="modal-img" id="modal-img">
+          </div>
+          <div class="modal-boton" id="modal-boton">X</div>
+        </div>
+
+        <div class="container-productos" id="lista-productos">
+          <div class="card"><img src="assets/img/CERVEZAS/CAJA CERVEZA CRISTAL O ESCUDO 1.2 LT.jpg" class="card-img"><h5>CAJA CERVEZA CRISTAL O ESCUDO 1.2 LT</h5><p>SKU: 007-000-002342</p><p>S/.<small class="precio">$11.766</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CAJA CERVEZA DORADA 1.2 LT X 10.jpg" class="card-img"><h5>CAJA CERVEZA DORADA 1.2 LT X 10</h5><p>SKU: 007-000-002341</p><p>S/.<small class="precio">$8.490</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CAJA CERVEZA SOL 710 CC X 12.jpg" class="card-img"><h5>CAJA CERVEZA SOL 710 CC X 12</h5><p>SKU: 007-000-002203</p><p>S/.<small class="precio">$11.100</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ARTESANAL MAESTRA RESERVA 750.png" class="card-img"><h5>CERVEZA ARTESANAL MAESTRA RESERVA 750</h5><p>SKU: 007-000-002757</p><p>S/.<small class="precio">$3.690</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ARTESANAL ODISEA 470 ML.png" class="card-img"><h5>CERVEZA ARTESANAL ODISEA 470 ML</h5><p>SKU: 007-000-002175</p><p>S/.<small class="precio">$930</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA AUSTRAL CALAFATE 330 C.C..jpg" class="card-img"><h5>CERVEZA AUSTRAL CALAFATE 330 C.C.</h5><p>SKU: 007-000-001380</p><p>S/.<small class="precio">$1.450</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA AUSTRAL CALAFATE 500 C.C..jpg" class="card-img"><h5>CERVEZA AUSTRAL CALAFATE 500 C.C.</h5><p>SKU: 007-000-001361</p><p>S/.<small class="precio">$1.690</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA AUSTRAL LAGER 330 CC.jpg" class="card-img"><h5>CERVEZA AUSTRAL LAGER 330 CC</h5><p>SKU: 007-000-001381</p><p>S/.<small class="precio">$1.450</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA BLADE 8 LT.jpg" class="card-img"><h5>CERVEZA BLADE 8 LT</h5><p>SKU: 007-000-001829</p><p>S/.<small class="precio">$25.990</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA COORS LATA 470 ML.jpg" class="card-img"><h5>CERVEZA COORS LATA 470 ML</h5><p>SKU: 007-000-001686</p><p>S/.<small class="precio">$816</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA COORS ORIGINAL BEER 355 ML.jpg" class="card-img"><h5>CERVEZA COORS ORIGINAL BEER 355 ML</h5><p>SKU: 007-000-001125</p><p>S/.<small class="precio">$890</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA CORONA 330 CC CAJA X 24 UNI..png" class="card-img"><h5>CERVEZA CORONA 330 CC CAJA X 24 UNI.</h5><p>SKU: 007-000-001111</p><p>S/.<small class="precio">$21.560</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA CRISTAL LATA 350 CC..jpg" class="card-img"><h5>CERVEZA CRISTAL LATA 350 CC.</h5><p>SKU: 007-000-001679</p><p>S/.<small class="precio">$687</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA CRISTAL RETORNABLE 1.2 LT.png" class="card-img"><h5>CERVEZA CRISTAL RETORNABLE 1.2 LT</h5><p>SKU: 007-000-001109</p><p>S/.<small class="precio">$1.200</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA CUSQUEÑA LATON 710 ML.jpg" class="card-img"><h5>CERVEZA CUSQUEÑA LATON 710 ML</h5><p>SKU: 007-000-002172</p><p>S/.<small class="precio">$1.000</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA CUSQUEÑA VIDRIO DESECHABLE 62.png" class="card-img"><h5>CERVEZA CUSQUEÑA VIDRIO DESECHABLE 62</h5><p>SKU: 007-000-001859</p><p>S/.<small class="precio">$900</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA DISPLAY CUSQUEÑA LATON 710 ML.png" class="card-img"><h5>CERVEZA DISPLAY CUSQUEÑA LATON 710 ML</h5><p>SKU: 007-000-002173</p><p>S/.<small class="precio">$11.100</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA DORADA 1.2 LTS RETORNABLE.png" class="card-img"><h5>CERVEZA DORADA 1.2 LTS RETORNABLE</h5><p>SKU: 007-000-002615</p><p>S/.<small class="precio">$850</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ESCUDO LAGER 470 ML.png" class="card-img"><h5>CERVEZA ESCUDO LAGER 470 ML</h5><p>SKU: 007-000-001681</p><p>S/.<small class="precio">$690</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ESCUDO LAGER RETORNABLE 1.2 L.jpg" class="card-img"><h5>CERVEZA ESCUDO LAGER RETORNABLE 1.2 L</h5><p>SKU: 007-000-001110</p><p>S/.<small class="precio">$1.200</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ESCUDO SILVER 470 C.C..jpg" class="card-img"><h5>CERVEZA ESCUDO SILVER 470 C.C.</h5><p>SKU: 024-000-001682</p><p>S/.<small class="precio">$605</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA HEINEKEN   CERO ALCOHOL 330 C..png" class="card-img"><h5>CERVEZA HEINEKEN CERO ALCOHOL 330 C.</h5><p>SKU: 007-000-001541</p><p>S/.<small class="precio">$890</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA HEINEKEN ORIGINAL 355 ML.png" class="card-img"><h5>CERVEZA HEINEKEN ORIGINAL 355 ML</h5><p>SKU: 007-000-001434</p><p>S/.<small class="precio">$885</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA HEINEKEN ORIGINAL 355 ML.png" class="card-img"><h5>CERVEZA HEINEKEN ORIGINAL RETORNABLE</h5><p>SKU: 007-000-001440</p><p>S/.<small class="precio">$1.260</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA KUNSTMANN TOROBAYO 330 C.C..jpg" class="card-img"><h5>CERVEZA KUNSTMANN TOROBAYO 330 C.C.</h5><p>SKU: 007-000-001382</p><p>S/.<small class="precio">$1.506</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA KUNSTMANN TOROBAYO 500 C.C..jpg" class="card-img"><h5>CERVEZA KUNSTMANN TOROBAYO 500 C.C.</h5><p>SKU: 007-000-001363</p><p>S/.<small class="precio">$1.690</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA LATA CRISTAL CERO 350 C.C..jpg" class="card-img"><h5>CERVEZA LATA CRISTAL CERO 350 C.C.</h5><p>SKU: 007-000-001523</p><p>S/.<small class="precio">$757</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA LATA CRISTAL RADLER CERO 350.jpg" class="card-img"><h5>CERVEZA LATA CRISTAL RADLER CERO 350</h5><p>SKU: 007-000-001522</p><p>S/.<small class="precio">$757</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA LATON BUDWEISER KING OF BEERS.jpg" class="card-img"><h5>CERVEZA LATON BUDWEISER KING OF BEERS</h5><p>SKU: 007-000-001362</p><p>S/.<small class="precio">$1.000</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA LEMON STONES 470 ML.jpg" class="card-img"><h5>CERVEZA LEMON STONES 470 ML</h5><p>SKU: 007-000-001680</p><p>S/.<small class="precio">$840</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MAESTRA   APA 330 CC..jpg" class="card-img"><h5>CERVEZA MAESTRA APA 330 CC.</h5><p>SKU: 007-000-003029</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MALTA MORENITA   1.2 ML.png" class="card-img"><h5>CERVEZA MALTA MORENITA 1.2 ML</h5><p>SKU: 007-000-001677</p><p>S/.<small class="precio">$1.350</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MALTA MORENITA LATA 470 ML.jpg" class="card-img"><h5>CERVEZA MALTA MORENITA LATA 470 ML</h5><p>SKU: 007-000-001685</p><p>S/.<small class="precio">$750</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MESTRA AMBER ALE ITALIA 330.jpg" class="card-img"><h5>CERVEZA MESTRA AMBER ALE ITALIA 330</h5><p>SKU: 007-000-002760</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MESTRA APA 330 CC.jpg" class="card-img"><h5>CERVEZA MESTRA APA 330 CC</h5><p>SKU: 007-000-003031</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MESTRA BLONDE   ALE   330CC..jpg" class="card-img"><h5>CERVEZA MESTRA BLONDE ALE 330CC.</h5><p>SKU: 007-000-002761</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MESTRA SCOTCH ALE   YUNGAY 330.jpg" class="card-img"><h5>CERVEZA MESTRA SCOTCH ALE YUNGAY 330</h5><p>SKU: 007-000-002758</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA MESTRA STOUT ALE   FRANKLIN 33.png" class="card-img"><h5>CERVEZA MESTRA STOUT ALE FRANKLIN 33</h5><p>SKU: 021-000-002759</p><p>S/.<small class="precio">$1.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA PATAGONIA AUSTRAL HOPPY LAGER.png" class="card-img"><h5>CERVEZA PATAGONIA AUSTRAL HOPPY LAGER</h5><p>SKU: 007-000-001688</p><p>S/.<small class="precio">$970</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA PATAGONIA AUSTRAL RED LAGER (.jpg" class="card-img"><h5>CERVEZA PATAGONIA AUSTRAL RED LAGER</h5><p>SKU: 007-000-001687</p><p>S/.<small class="precio">$5.820</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA PATAGONIA BLACK LAGER 470 CC.png" class="card-img"><h5>CERVEZA PATAGONIA BLACK LAGER 470 CC</h5><p>SKU: 007-000-001126</p><p>S/.<small class="precio">$970</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ROYAL BOTELLIN 330 CC X 6 UND.jpg" class="card-img"><h5>CERVEZA ROYAL BOTELLIN 330 CC X 6 UND</h5><p>SKU: 007-000-001778</p><p>S/.<small class="precio">$4.850</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ROYAL GUARD PREMIUN LAGER   RE.jpg" class="card-img"><h5>CERVEZA ROYAL GUARD PREMIUN LAGER RE</h5><p>SKU: 007-000-001439</p><p>S/.<small class="precio">$1.190</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA ROYAL RETORNABLE X6 330CC..jpg" class="card-img"><h5>CERVEZA ROYAL RETORNABLE X6 330CC.</h5><p>SKU: 007-000-002826</p><p>S/.<small class="precio">$3.990</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA SOL 330CC X 6.jpg" class="card-img"><h5>CERVEZA SOL 330CC X 6</h5><p>SKU: 007-000-002350</p><p>S/.<small class="precio">$5.300</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA SOL 710 CC.png" class="card-img"><h5>CERVEZA SOL 710 CC</h5><p>SKU: 007-000-002202</p><p>S/.<small class="precio">$1.000</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZA STELLA ARTOIS VIDRIO DESECHAB.png" class="card-img"><h5>CERVEZA STELLA ARTOIS VIDRIO DESECHAB</h5><p>SKU: 021-000-001858</p><p>S/.<small class="precio">$11.000</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          <div class="card"><img src="assets/img/CERVEZAS/CERVEZAS STELLA ARTOIS 330 CC BOTELLI.jpg" class="card-img"><h5>CERVEZAS STELLA ARTOIS 330 CC BOTELLI</h5><p>SKU: 007-000-001433</p><p>S/.<small class="precio">$930</small></p><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+          
+
+        </div>
+</main>
+  
+
+<footer class="footer-section">
+  <div class="copyright-area">
+      <div class="container-footer">
+          <div class="row-footer">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                  <div class="copyright-text">
+                      <p>Copyright &copy; 2020, todos los derechos reservados <a href="index.html">Distribuidora El Palmar</a></p>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                  <div class="footer-menu">
+                      <ul>
+                          <li><a href="nosotros.html">Nosotros</a></li>
+                          <li><a href="productos.html">Productos</a></li>
+                          <!--<li><a href="contacto.html">Contacto</a></li>-->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer> 
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script  src="assets/js/scripts.js"></script>
+    <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/pedido.js"></script>
+    <script src="assets/js/compra.js"></script>
+</body>
+</html>
